@@ -1,0 +1,279 @@
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #364f6b;
+    height: 70px;
+    padding: 0 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .logos img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav .option {
+    display: flex;
+}
+
+nav a {
+    margin-left: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: textFadeIn 2s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #3fc1c9;
+    color: #364f6b;
+    border-radius: 20px;
+}
+
+
+.principale {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.principale div {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.principale h1 {
+    font-size: 2.5em;
+    color: #3fc1c9;
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-in-out, textScaleUp 0.5s ease-in-out;
+}
+
+.principale p {
+    font-size: 1.2em;
+    color: #364f6b;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out, textFadeIn 2s ease-in-out;
+}
+ 
+input[type="button"] {
+    padding: 12px 25px;
+    background-color: #3fc1c9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #2f89a6;
+}
+
+
+.filiers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btsw {
+    border-radius: 15%;
+}
+
+.f1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #a8d8ea;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.f1 img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 10px;
+    animation: fadeIn 2s ease-in-out, scaleUp 0.5s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.f1 img:hover {
+    transform: scale(1.1);
+}
+
+
+.inscription {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.inscription h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px 0;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #3fc1c9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #2f89a6;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .principale {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .principale div {
+        text-align: center;
+    }
+
+    .f1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .f1 img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav .option {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin-left: 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .principale h1 {
+        font-size: 2em;
+    }
+
+    .principale p {
+        font-size: 1.1em;
+    }
+
+    input[type="button"] {
+        width: 100%;
